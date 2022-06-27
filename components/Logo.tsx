@@ -3,10 +3,10 @@ import { useTrail, animated, config } from 'react-spring';
 import { useEffect } from 'react';
 
 const data = [
-  { stroke: '#ffff00', id: 'yellow', d: 'M 3.7271811,2 V 23' },
-  { stroke: '#ff0000', id: 'red', d: 'M 3.7271811,2 21.343297,22.53033' },
+  { stroke: '#FDDE06', id: 'yellow', d: 'M 3.7271811,2 V 23' },
+  { stroke: '#E70503', id: 'red', d: 'M 3.7271811,2 21.343297,22.53033' },
   {
-    stroke: '#0000ff',
+    stroke: '#0300AD',
     id: 'blue',
     d: 'm 3.7271811,2 h 6.4999999 c 2.643593,2e-7 4.624355,1.1435937 5.696152,3 1.071797,1.8564065 1.071797,4.1435935 0,6 -1.071797,1.856405 -3.052559,3 -5.696152,3 H 8.7271811',
   },

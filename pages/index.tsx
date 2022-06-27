@@ -7,13 +7,12 @@ import IntroTitle from '../components/IntroTitle';
 
 const Intro = () => {
   const [show, set] = useState(false);
-
   const [{ x }, drawAPI] = useSpring(() => ({ x: 0 }));
+  const [hideBtn, btnAPI] = useSpring(() => ({ opacity: 0, y: 20, scale: 0 }));
+
   useEffect(() => {
     drawAPI.start({ x: 1, config: config.molasses });
   }, []);
-
-  const [hideBtn, btnAPI] = useSpring(() => ({ opacity: 0, y: 20, scale: 0 }));
 
   const handleLoopDone = () => {
     set(() => true);
@@ -46,7 +45,7 @@ const Intro = () => {
                 <animated.rect
                   id='rectangle'
                   fill='none'
-                  stroke='#ff0000'
+                  stroke='#E70503'
                   strokeWidth={0.5}
                   strokeDasharray={100}
                   strokeDashoffset={x.to((x) => (1 - x) * 100)}
@@ -58,7 +57,7 @@ const Intro = () => {
                 <animated.path
                   id='triangle'
                   fill='none'
-                  stroke='#ffff00'
+                  stroke='#FDDE06'
                   strokeWidth={0.5}
                   strokeDasharray={50}
                   strokeDashoffset={x.to((x) => (1 - x) * 50)}
@@ -67,7 +66,7 @@ const Intro = () => {
                 <animated.circle
                   id='circle'
                   fill='none'
-                  stroke='#0000ff'
+                  stroke='#0300AD'
                   strokeWidth={0.5}
                   strokeDasharray={50}
                   strokeDashoffset={x.to((x) => (1 - x) * 50)}
@@ -115,7 +114,7 @@ const Intro = () => {
               <animated.rect
                 id='rectangle'
                 fill='none'
-                stroke='#ff0000'
+                stroke='#E70503'
                 strokeWidth={0.5}
                 strokeLinecap='round'
                 strokeDasharray={100}
@@ -128,7 +127,7 @@ const Intro = () => {
               <animated.path
                 id='triangle'
                 fill='none'
-                stroke='#ffff00'
+                stroke='#FDDE06'
                 strokeWidth={0.5}
                 strokeLinecap='round'
                 strokeDasharray={50}
@@ -138,7 +137,7 @@ const Intro = () => {
               <animated.circle
                 id='circle'
                 fill='none'
-                stroke='#0000ff'
+                stroke='#0300AD'
                 strokeWidth={0.5}
                 strokeLinecap='round'
                 strokeDasharray={50}

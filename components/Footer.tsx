@@ -29,10 +29,10 @@ const Footer: React.FC = (): JSX.Element => {
                   : 'font-semibold space-x-1'
               }
             >
-              <span className='border-b-[#0000ff] border-b'>Robert</span>
-              <span className='border-b-[#ff0000] border-b'>Adams</span>
+              <span className='border-b-pm-blue border-b'>Robert</span>
+              <span className='border-b-pm-red border-b'>Adams</span>
               <span>©</span>
-              <span className='border-b-[#ffff00] border-b'>{year}</span>
+              <span className='border-b-pm-yellow border-b'>{year}</span>
             </a>
           </Link>
         </animated.div>

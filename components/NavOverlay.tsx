@@ -8,9 +8,9 @@ type MenuProps = {
 };
 
 const data = [
-  { path: 'projects', color: '#0000ff' },
-  { path: 'about', color: '#ff0000' },
-  { path: 'contact', color: '#ffff00' },
+  { path: 'projects', color: '#0300AD' },
+  { path: 'about', color: '#E70503' },
+  { path: 'contact', color: '#FDDE06' },
 ];
 
 const NavOverlay: React.FC<MenuProps> = ({ active, handleToggle }) => {

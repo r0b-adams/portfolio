@@ -42,7 +42,7 @@ const ResumeSpring: React.FC<{}> = () => {
 
   return (
     <div className='flex flex-col items-center relative pb-10'>
-      <div className='h-2 bg-[#0000ff] w-32' />
+      <div className='h-2 bg-pm-blue w-32' />
       <animated.svg
         style={{ scaleY: y.to((y) => y) }}
         id='spring'
@@ -54,7 +54,7 @@ const ResumeSpring: React.FC<{}> = () => {
       >
         <path
           fill='none'
-          stroke='#e7e7e7'
+          stroke='#c7c7c7'
           strokeOpacity='1'
           strokeWidth='8px'
           strokeLinecap='round'
@@ -75,21 +75,20 @@ const ResumeSpring: React.FC<{}> = () => {
         >
           Resume
         </a>
-        <div className='origin-center h-1 bg-red-500' />
+        <div className='origin-center h-1 bg-pm-red' />
       </animated.div>
     </div>
   );
 };
 
 const About: NextPage = () => {
-  const [avatar, avAPI] = useSpring(() => ({ scale: 0 }));
+  const [avatar, avAPI] = useSpring(() => ({ scale: 0, opacity: 0 }));
   const [lg, lgAPI] = useTrail(lgs.length, () => ({ opacity: 0, y: 20 }));
   const [ft, ftAPI] = useTrail(fts.length, () => ({ opacity: 0, y: 20 }));
   const [bk, bkAPI] = useTrail(bks.length, () => ({ opacity: 0, y: 20 }));
   const [dv, dvAPI] = useTrail(dvs.length, () => ({ opacity: 0, y: 20 }));
 
   useEffect(() => {
-    avAPI.start({ scale: 1 });
     lgAPI.start({ opacity: 1, y: 0 });
     ftAPI.start({ opacity: 1, y: 0 });
     bkAPI.start({ opacity: 1, y: 0 });
@@ -113,6 +112,9 @@ const About: NextPage = () => {
             <animated.div style={avatar}>
               <div className='rounded-full'>
                 <Image
+                  onLoadingComplete={() =>
+                    avAPI.start({ scale: 1, opacity: 1 })
+                  }
                   src='/images/avatar.jpg'
                   alt='avatar'
                   layout='intrinsic'

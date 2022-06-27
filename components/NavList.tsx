@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { useTrail, useSprings, animated } from 'react-spring';
 
 const data = [
-  { name: 'projects', color: '#0000ff' },
-  { name: 'about', color: '#ff0000' },
-  { name: 'contact', color: '#ffff00' },
+  { name: 'projects', color: '#0300AD' },
+  { name: 'about', color: '#E70503' },
+  { name: 'contact', color: '#FDDE06' },
 ];
 
 const NavList: React.FC = (): JSX.Element => {

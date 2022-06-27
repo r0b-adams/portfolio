@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useTransition, animated } from 'react-spring';
 import Image from 'next/image';
 import Header from './Header';
 import Footer from './Footer';
-
-import { useTransition, animated } from 'react-spring';
 
 const Layout: React.FC<{
   page: JSX.Element | JSX.Element[];
@@ -25,9 +24,9 @@ const Layout: React.FC<{
   });
 
   const btnTransition = useTransition(show, {
-    from: { scale: 0 },
-    enter: { scale: 1 },
-    leave: { scale: 0 },
+    from: { scale: 0, opacity: 0 },
+    enter: { scale: 1, opacity: 1 },
+    leave: { scale: 0, opacity: 0 },
   });
 
   const scrollToTop = () => {
@@ -38,7 +37,6 @@ const Layout: React.FC<{
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
-
       {pageTransition((style, nextPage) => (
         <animated.main
           style={style}

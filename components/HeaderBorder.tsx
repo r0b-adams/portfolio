@@ -3,15 +3,15 @@ import { useSprings, animated } from 'react-spring';
 
 const data: { color: string; widths: { [key: string]: string } }[] = [
   {
-    color: '#0000ff',
+    color: '#0300AD',
     widths: { '/projects': '100%', '/about': '33%', '/contact': '66%' },
   },
   {
-    color: '#ff0000',
+    color: '#E70503',
     widths: { '/projects': '66%', '/about': '100%', '/contact': '33%' },
   },
   {
-    color: '#ffff00',
+    color: '#FDDE06',
     widths: { '/projects': '33%', '/about': '66%', '/contact': '100%' },
   },
 ];
